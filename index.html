@@ -51,6 +51,7 @@
       width: 100%;
       display: none;
       border-radius: 8px;
+      cursor: pointer;
     }
     .carousel img.active {
       display: block;
@@ -70,6 +71,42 @@
     .carousel-controls button:hover {
       background-color: #666;
     }
+
+    /* Fullscreen Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .modal-buttons {
+      margin-top: 20px;
+    }
+    .modal-buttons button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .modal-buttons button:hover {
+      background-color: #555;
+    }
   </style>
 </head>
 <body>
@@ -81,9 +118,9 @@
     <div class="panel">
       <ul>
         <li>🚫 <strong>Assalto Proibido:</strong> Assaltos a civis ou motoristas estão terminantemente proibidos por decisão da liderança e da cidade.</li>
+        <li>🚫 <strong>Venda de Armamento Pesado:</strong> É proibido vender armas de grosso calibre para civis ou outras facções.</li>
         <li>🚫 <strong>Sequestro a Oficial:</strong> Somente com Motivos e autorizado pela Cúpula.</li>
         <li>🚫 <strong>Sequestro a Players:</strong> Somente com Motivos e para Ações com Refém.</li>
-        <li>🚫 <strong>Venda de Armamento Pesado:</strong> É proibido vender armas de grosso calibre para civis ou outras facções.</li>
         <li>🚫 <strong>Reconhecer a Cúpula:</strong> Reconhecer visualmente ou em RP qualquer membro da cúpula resultará em PD imediato.</li>
         <li>🚫 <strong>Descer e Quebrar na Pista Contra a Polícia:</strong> Está proibido iniciar confronto com a polícia sem motivo fundamentado.</li>
         <li>🚫 <strong>Atitudes Desorganizadas:</strong> Chamadas bagunçadas, ausência de RP ou uso de gírias fora do personagem não são toleradas.</li>
@@ -133,15 +170,15 @@
     <button class="accordion">📸 REGRAS AÇÕES:</button>
     <div class="panel">
       <div class="carousel">
-        <img src="acao1.png" class="active" />
-        <img src="acao2.png" />
-        <img src="acao3.png" />
-        <img src="acao4.png" />
-        <img src="acao5.png" />
-        <img src="acao6.png" />
-        <img src="acao7.png" />
-        <img src="acao8.png" />
-        <img src="acao9.png" />
+        <img src="acao1.png" class="active" onclick="openModal(0)" />
+        <img src="acao2.png" onclick="openModal(1)" />
+        <img src="acao3.png" onclick="openModal(2)" />
+        <img src="acao4.png" onclick="openModal(3)" />
+        <img src="acao5.png" onclick="openModal(4)" />
+        <img src="acao6.png" onclick="openModal(5)" />
+        <img src="acao7.png" onclick="openModal(6)" />
+        <img src="acao8.png" onclick="openModal(7)" />
+        <img src="acao9.png" onclick="openModal(8)" />
       </div>
       <div class="carousel-controls">
         <button onclick="prevImage()">⬅️ Voltar</button>
@@ -154,6 +191,16 @@
   <p style="color: orange; margin-top: 30px;">
     🔒 Estas regras podem ser atualizadas a qualquer momento pela liderança da ILEGAL DE TURN. Fique atento aos avisos no Discord.
   </p>
+
+  <!-- Modal de tela cheia -->
+  <div class="modal" id="fullscreenModal">
+    <img id="modalImage" src="" />
+    <div class="modal-buttons">
+      <button onclick="prevModal()">⬅️</button>
+      <button onclick="closeModal()">❌</button>
+      <button onclick="nextModal()">➡️</button>
+    </div>
+  </div>
 
   <script>
     const accordions = document.querySelectorAll(".accordion");
@@ -188,6 +235,30 @@
     function closeCarousel() {
       const carouselSection = document.querySelector(".carousel").parentElement;
       carouselSection.style.display = "none";
+    }
+
+    // Fullscreen Modal
+    const modal = document.getElementById("fullscreenModal");
+    const modalImg = document.getElementById("modalImage");
+
+    function openModal(index) {
+      currentIndex = index;
+      modalImg.src = images[currentIndex].src;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function nextModal() {
+      currentIndex = (currentIndex + 1) % images.length;
+      modalImg.src = images[currentIndex].src;
+    }
+
+    function prevModal() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      modalImg.src = images[currentIndex].src;
     }
   </script>
 </body>
