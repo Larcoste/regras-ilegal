@@ -1,174 +1,194 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Regras Oficiais do ILEGAL</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f0f0f;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
     h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #63b3ed;
+      color: #3399ff;
     }
-    .warning {
-      text-align: center;
-      color: orange;
-      margin-bottom: 2rem;
+    .section {
+      background-color: #1a1a1a;
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 800px;
+      border: 1px solid #333;
+      border-radius: 10px;
     }
-    .accordion {
-      background-color: #1f1f1f;
-      color: #fff;
+    button.accordion {
+      background-color: #222;
+      color: #00ccff;
       cursor: pointer;
-      padding: 18px;
+      padding: 15px;
       width: 100%;
       border: none;
       text-align: left;
       outline: none;
-      font-size: 1.2rem;
-      transition: background-color 0.2s ease;
-      margin-bottom: 5px;
+      font-size: 16px;
     }
-    .accordion:hover {
-      background-color: #2a2a2a;
+    button.accordion:hover {
+      background-color: #333;
     }
     .panel {
-      padding: 0 18px;
       display: none;
-      background-color: #2a2a2a;
-      overflow: hidden;
-      margin-bottom: 1rem;
+      padding: 10px;
+      text-align: left;
+      background-color: #1c1c1c;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 2rem;
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
     }
-    .gallery img {
-      width: 150px;
-      height: auto;
-      cursor: pointer;
-      border: 2px solid #444;
-      border-radius: 8px;
-      transition: transform 0.2s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
+    .carousel img {
       width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
+      display: none;
+      border-radius: 8px;
     }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+    .carousel img.active {
+      display: block;
     }
-    .close, .prev, .next {
-      position: absolute;
-      top: 20px;
-      color: #fff;
-      font-size: 2rem;
+    .carousel-controls {
+      margin-top: 10px;
+    }
+    .carousel-controls button {
+      padding: 8px 16px;
+      margin: 0 5px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
-      user-select: none;
     }
-    .close { right: 30px; }
-    .prev { left: 30px; }
-    .next { right: 80px; }
+    .carousel-controls button:hover {
+      background-color: #666;
+    }
   </style>
 </head>
 <body>
   <h1>📜 REGRAS OFICIAIS DO ILEGAL</h1>
-  <div class="warning">🔒 Estas regras podem ser atualizadas a qualquer momento pela liderança da ILEGAL DE TURN.</div>
+  <p>Estas regras visam manter a ordem interna, a organização do ilegal e o respeito às diretrizes da cidade. Todos os membros devem seguir rigorosamente cada item listado abaixo.</p>
 
-  <button class="accordion">Condutas Proibidas:</button>
-  <div class="panel">
-    <ul><li>❌ Uso de programas externos</li><li>❌ MetaGaming</li><li>❌ PowerGaming</li></ul>
+  <div class="section">
+    <button class="accordion">🔴 CONDUTAS PROIBIDAS:</button>
+    <div class="panel">
+      <ul>
+        <li>🚫 <strong>Assalto Proibido:</strong> Assaltos a civis ou motoristas estão terminantemente proibidos por decisão da liderança e da cidade.</li>
+        <li>🚫 <strong>Sequestro a Oficial:</strong> Somente com Motivos e autorizado pela Cúpula.</li>
+        <li>🚫 <strong>Sequestro a Players:</strong> Somente com Motivos e para Ações com Refém.</li>
+        <li>🚫 <strong>Venda de Armamento Pesado:</strong> É proibido vender armas de grosso calibre para civis ou outras facções.</li>
+        <li>🚫 <strong>Reconhecer a Cúpula:</strong> Reconhecer visualmente ou em RP qualquer membro da cúpula resultará em PD imediato.</li>
+        <li>🚫 <strong>Descer e Quebrar na Pista Contra a Polícia:</strong> Está proibido iniciar confronto com a polícia sem motivo fundamentado.</li>
+        <li>🚫 <strong>Atitudes Desorganizadas:</strong> Chamadas bagunçadas, ausência de RP ou uso de gírias fora do personagem não são toleradas.</li>
+      </ul>
+    </div>
   </div>
 
-  <button class="accordion">Condutas Obrigatórias:</button>
-  <div class="panel">
-    <ul><li>✅ Respeitar todos os membros</li><li>✅ Seguir ordens da liderança</li></ul>
+  <div class="section">
+    <button class="accordion">🟢 CONDUTAS OBRIGATÓRIAS:</button>
+    <div class="panel">
+      <ul>
+        <li>🧹 <strong>Manter o Discord Organizado:</strong> Canais limpos, mensagens nos lugares certos e dúvidas com superiores.</li>
+        <li>🗣️ <strong>Respeito Acima de Tudo:</strong> Respeito entre membros, aliados e até polícia em trégua é obrigatório.</li>
+        <li>🚗 <strong>Fugir é Prioridade:</strong> Sempre priorize fuga limpa nas ações. Confronto é último recurso.</li>
+        <li>🚓 <strong>COPBAIT ESTÁ PROIBIDO:</strong> Qualquer copbait será punido pela equipe administrativa.</li>
+        <li>👮 <strong>Respeitar a Cena Policial:</strong> É obrigatório respeitar tempo de abordagem e diálogo.</li>
+      </ul>
+    </div>
   </div>
 
-  <button class="accordion">Regras Internas Extras:</button>
-  <div class="panel">
-    <ul><li>📌 A cada 10 membros, 1 liderança auxiliar é permitida</li></ul>
+  <div class="section">
+    <button class="accordion">⚠️ REGRAS INTERNAS EXTRAS:</button>
+    <div class="panel">
+      <ul>
+        <li>🎯 <strong>Roubo Proibido:</strong> Não é permitido roubar membros da própria facção ou aliados.</li>
+        <li>🔇 <strong>Proibido Quebra de Personagem:</strong> Informações externas não podem ser usadas no RP.</li>
+        <li>🧠 <strong>Use Sempre a Criatividade:</strong> RP repetitivo pode ser cortado. Inove.</li>
+        <li>📸 <strong>Registro de Ações:</strong> Sempre que possível, grave ou tire print para comprovação.</li>
+      </ul>
+    </div>
   </div>
 
-  <button class="accordion">Punições:</button>
-  <div class="panel">
-    <ul><li>🚫 Banimento temporário</li><li>🚫 Banimento permanente</li></ul>
+  <div class="section">
+    <button class="accordion">⚖️ PUNIÇÕES:</button>
+    <div class="panel">
+      <ul>
+        <li>Advertência verbal ou escrita</li>
+        <li>Suspensão temporária</li>
+        <li>Expulsão da facção</li>
+        <li>PD imediato (PERDA DE PERSONAGEM)</li>
+        <li>Banimento do Discord Ilegal</li>
+      </ul>
+    </div>
   </div>
 
-  <button class="accordion">Regras de Ações:</button>
-  <div class="panel">
-    <ul><li>🔫 Permitido sequestro com no mínimo 3 membros online</li></ul>
+  <div class="section">
+    <button class="accordion">📸 REGRAS AÇÕES:</button>
+    <div class="panel">
+      <div class="carousel">
+        <img src="acao1.png" class="active" />
+        <img src="acao2.png" />
+        <img src="acao3.png" />
+        <img src="acao4.png" />
+        <img src="acao5.png" />
+        <img src="acao6.png" />
+        <img src="acao7.png" />
+        <img src="acao8.png" />
+        <img src="acao9.png" />
+      </div>
+      <div class="carousel-controls">
+        <button onclick="prevImage()">⬅️ Voltar</button>
+        <button onclick="nextImage()">➡️ Avançar</button>
+        <button onclick="closeCarousel()">❌ Fechar</button>
+      </div>
+    </div>
   </div>
 
-  <div class="gallery">
-    <img src="images/img1.png" alt="Imagem 1" />
-    <img src="images/img2.png" alt="Imagem 2" />
-    <img src="images/img3.png" alt="Imagem 3" />
-  </div>
-
-  <div class="lightbox" id="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
-    <img id="lightbox-img" src="" alt="Preview" />
-    <span class="next" onclick="changeImage(1)">&#10095;</span>
-  </div>
+  <p style="color: orange; margin-top: 30px;">
+    🔒 Estas regras podem ser atualizadas a qualquer momento pela liderança da ILEGAL DE TURN. Fique atento aos avisos no Discord.
+  </p>
 
   <script>
-    const acc = document.querySelectorAll(".accordion");
-    acc.forEach(btn => {
-      btn.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+      acc.addEventListener("click", () => {
+        acc.classList.toggle("active");
+        const panel = acc.nextElementSibling;
         panel.style.display = panel.style.display === "block" ? "none" : "block";
       });
     });
 
-    const images = document.querySelectorAll(".gallery img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
     let currentIndex = 0;
+    const images = document.querySelectorAll(".carousel img");
 
-    function showLightbox(index) {
-      currentIndex = index;
-      lightbox.style.display = "flex";
-      lightboxImg.src = images[currentIndex].src;
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.remove("active");
+        if (i === index) img.classList.add("active");
+      });
     }
 
-    function closeLightbox() {
-      lightbox.style.display = "none";
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
     }
 
-    function changeImage(direction) {
-      currentIndex = (currentIndex + direction + images.length) % images.length;
-      lightboxImg.src = images[currentIndex].src;
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
     }
 
-    images.forEach((img, index) => {
-      img.addEventListener("click", () => showLightbox(index));
-    });
+    function closeCarousel() {
+      const carouselSection = document.querySelector(".carousel").parentElement;
+      carouselSection.style.display = "none";
+    }
   </script>
 </body>
 </html>
